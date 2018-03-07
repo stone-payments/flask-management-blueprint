@@ -1,0 +1,1 @@
+stoneco-flask-management-blueprint
