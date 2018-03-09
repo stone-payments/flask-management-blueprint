@@ -6,7 +6,7 @@ LIB_PATH = os.path.join(os.path.dirname(__file__), "..")
 sys.path.insert(0, LIB_PATH)
 
 from flask import Flask
-from flask_management_blueprint.management import setup_blueprint
+from flask_management_blueprint import setup_blueprint
 
 
 def create_api(name):
