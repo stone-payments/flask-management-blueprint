@@ -37,6 +37,9 @@ class TestAppInfo(TestCase):
 
         self.assertEqual(AppInfo.app_status(), OK)
 
+    def test_app_status_ok_without_resources(self):
+        self.assertEqual(AppInfo.app_status(), OK)
+
     def test_app_status_partially_ok(self):
         AppInfo.register_resource(healthy)
         AppInfo.register_resource(unhealthy)
