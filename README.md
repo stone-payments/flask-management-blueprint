@@ -1,4 +1,4 @@
-# Stoneco Flask Management Blueprint
+# Flask Management Blueprint
 
 This repository contains a project developed with Python3 :heart: with a blueprint that describe the necessary endpoints to meet the engineering goals.
 
@@ -10,7 +10,7 @@ This instructions should be enough to replicate the development enviroment of th
 
 After cloning the project, you will need Python 3.5.
 
-## Enviroment
+## Environment
 
 ```
 python3 -m venv /path/to/new/virtual/environment
@@ -36,7 +36,7 @@ Unit tests:
 
 Coverage:
 
-`nosetests --with-coverage --cover-package=app`
+`nosetests --with-coverage --cover-package=flask_management_blueprint`
 
 
 ## Built With
