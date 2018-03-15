@@ -19,10 +19,9 @@ class TestHealthCheck(TestCase):
         mock.get("http://mock.com/health-check", status=200,
                  payload={"success": False})
 
-        loop = asyncio.get_event_loop()
-        actual = loop.run_until_complete(HealthCheck.check_resources_health())
+        actual = HealthCheck.check_resources_health()
 
-        expected = [{"success": False}]
+        expected = { "resource1" : {"success": False} }
 
         self.assertEqual(actual, expected)
 
@@ -43,13 +42,12 @@ class TestHealthCheck(TestCase):
         mock.get("http://dunno.com/health-check", status=500,
                  payload={"message": "Internal Error"})
 
-        loop = asyncio.get_event_loop()
-        actual = loop.run_until_complete(HealthCheck.check_resources_health())
+        actual = HealthCheck.check_resources_health()
 
-        expected = [
-            {"success": True},
-            {"success": False, "dependencies": False},
-            {"message": "Internal Error"}
-        ]
+        expected = {
+            "resource1" : {"success": True},
+            "resource2" : {"success": False, "dependencies": False},
+            "resource3" : {"message": "Internal Error"}
+        }
 
         self.assertEqual(actual, expected)
