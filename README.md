@@ -1,5 +1,7 @@
 # Flask Management Blueprint
 
+[![Build Status](https://travis-ci.org/stone-payments/flask-management-blueprint.svg?branch=master)](https://travis-ci.org/stone-payments/flask-management-blueprint)
+
 This repository contains a project developed with Python3 :heart: with a blueprint that describe the necessary endpoints to meet the engineering goals.
 
 ## Starting...
