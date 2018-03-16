@@ -13,6 +13,6 @@ setup(
     name='flask_management_blueprint',
     packages=find_packages(exclude=['tests']),
     py_modules=['flask_management_blueprint'],
-    url='https://github.com/stone-payments/stoneco-flask-management-blueprint',
+    url='https://github.com/stone-payments/flask-management-blueprint',
     version='0.1.0',
 )
