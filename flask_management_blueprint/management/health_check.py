@@ -44,9 +44,6 @@ class HealthCheck(object):
         url_list = [list(rec.values())[0]
                     for rec in cls.RESOURCES]
 
-        name_list = [list(rec.keys())[0]
-                     for rec in cls.RESOURCES]
-
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
 
@@ -54,4 +51,4 @@ class HealthCheck(object):
             *[execute_request(url) for url in url_list]
         ))
 
-        return dict(zip(name_list, resp))
+        return resp

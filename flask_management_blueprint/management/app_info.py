@@ -5,6 +5,7 @@ import os
 import platform
 import socket
 
+from .health_status import OK, PARTIALLY_OK, CRITICAL
 
 class AppInfo(object):
     """Class to define methods to manage app-info"""
@@ -18,24 +19,20 @@ class AppInfo(object):
         """
 
         healthy = 0
-        unhealthy = 0
-
         for resource in cls.RESOURCES:
             try:
                 if resource() is True:
                     healthy += 1
-                else:
-                    unhealthy += 1
             except Exception as exc:
                 # TODO logar exception
-                unhealthy += 1
-
-        if unhealthy == 0:
-            return 10
+                print(exc)
         if healthy == 0:
-            return 30
-        return 20
-
+            return CRITICAL
+        if len(cls.RESOURCES) == healthy:
+            return OK
+        else:
+            return PARTIALLY_OK
+            
     @classmethod
     def register_resource(cls, resource):
         """Method to register a resource necessary to the app
@@ -67,6 +64,7 @@ class AppInfo(object):
         if cls.CONFIG == {}:
             cls.read_config()
 
+        status = cls.app_status()
         return {
             "ApplicationName": cls.CONFIG.get("ApplicationName", "Unknown"),
             "ApplicationType": cls.CONFIG.get("ApplicationType", "Unknown"),
@@ -77,7 +75,8 @@ class AppInfo(object):
                 "Version": '{} {}'.format(platform.system(),
                                           platform.release())
             },
-            "Status": cls.app_status(),
+            "Status": status[0],
+            "StatusName" : status[1],
             "Timestamp": datetime.datetime.now().isoformat(),
             "Version": cls.CONFIG.get("Version", "Unknown"),
         }

@@ -21,7 +21,7 @@ class TestHealthCheck(TestCase):
 
         actual = HealthCheck.check_resources_health()
 
-        expected = { "resource1" : {"success": False} }
+        expected = [{"success": False}]
 
         self.assertEqual(actual, expected)
 
@@ -44,10 +44,10 @@ class TestHealthCheck(TestCase):
 
         actual = HealthCheck.check_resources_health()
 
-        expected = {
-            "resource1" : {"success": True},
-            "resource2" : {"success": False, "dependencies": False},
-            "resource3" : {"message": "Internal Error"}
-        }
+        expected = [
+            {"success": True},
+            {"success": False, "dependencies": False},
+            {"message": "Internal Error"}
+        ]
 
         self.assertEqual(actual, expected)
