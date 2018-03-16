@@ -26,10 +26,10 @@ class AppInfo(object):
             except Exception as exc:
                 # TODO logar exception
                 print(exc)
-        if healthy == 0:
-            return CRITICAL
         if len(cls.RESOURCES) == healthy:
             return OK
+        if healthy == 0:
+            return CRITICAL
         else:
             return PARTIALLY_OK
             
