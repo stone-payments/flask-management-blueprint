@@ -20,7 +20,6 @@ def app_info():
 
 def health_check():
     """Returns general informations about the health of the application"""
-    return jsonify({
-        "app": AppInfo.app_info(),
-        "dependencies": HealthCheck.check_resources_health(),
-    })
+    info = AppInfo.app_info()
+    info['Components'] = HealthCheck.check_resources_health()
+    return jsonify(info)
