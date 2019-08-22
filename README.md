@@ -4,7 +4,7 @@
 
 This repository contains a project developed with Python3 :heart: with a blueprint that describe the necessary endpoints to meet the engineering goals.
 
-## Starting...
+## Starting
 
 This instructions should be enough to replicate the development enviroment of this project. If this is not the case, please, feel free to open a pull request.
 
@@ -14,7 +14,7 @@ After cloning the project, you will need Python 3.5.
 
 ## Environment
 
-```
+```bash
 python3 -m venv /path/to/new/virtual/environment
 source venv/bin/activate
 pip install -r requirements.txt
@@ -39,7 +39,6 @@ Unit tests:
 Coverage:
 
 `nosetests --with-coverage --cover-package=flask_management_blueprint`
-
 
 ## Built With
 
