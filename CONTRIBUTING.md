@@ -21,24 +21,25 @@
 - We use GitFlow, you can find more about this workfow [here](http://nvie.com/posts/a-successful-git-branching-model/).
 
 ### Branching
--  **New Features** `feature/<Name of feature>` from `develop`.
--  **Bugfix** `bugfix/<Name of bugfix>` from `develop`.
--  **Improvements** `improvement/<Name of improvement>` from `develop`.
--  **Hotfix** `bugfix/<Name of hotfix>` from `master`.
+
+- **New Features** `feature/<Name of feature>` from `develop`.
+- **Bugfix** `bugfix/<Name of bugfix>` from `develop`.
+- **Improvements** `improvement/<Name of improvement>` from `develop`.
+- **Hotfix** `bugfix/<Name of hotfix>` from `master`.
 
 ### Tests and coverage
 
 - Don't forget to write tests!!
 - We'd like to keep our project with a minimum of 60%, but 90% is the desirable target.
 
-### Commit messages 
+### Commit messages
 
 - Use emoji at the beginning of each message. It help us to identify what's the purpose for each commit.
 
 | Code.                 | Emoji               | Description                                     |
 |-----------------------|---------------------|-------------------------------------------------|
-| `:rocket:`            | :rocket:            | when deploying a new version					|
-| `:airplane:`          | :airplane:          | when releasing a new beta version				|
+| `:rocket:`            | :rocket:            | when deploying a new version                    |
+| `:airplane:`          | :airplane:          | when releasing a new beta version               |
 | `:art:`               | :art:               | when improving the format/structure of the code |
 | `:racehorse:`         | :racehorse:         | when improving performance                      |
 | `:memo:`              | :memo:              | when writing docs                               |
@@ -57,9 +58,9 @@
 | `:facepunch:`         | :facepunch:         | when resolving conflicts                        |
 | `:hammer:`            | :hammer:            | when changing configuration files               |
 
-
 Commit exemple:
-```
+
+```bash
 git commit -m ":arrow_up: Updates requirements.txt"
 ```
 
