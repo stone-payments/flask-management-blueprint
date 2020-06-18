@@ -14,5 +14,5 @@ setup(
     packages=find_packages(exclude=['tests']),
     py_modules=['flask_management_blueprint'],
     url='https://github.com/stone-payments/flask-management-blueprint',
-    version='0.1.1',
+    version='0.2.0',
 )
