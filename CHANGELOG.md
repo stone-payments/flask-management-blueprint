@@ -2,6 +2,12 @@
 
 The changes made in every release of this project will be commented here. This document is based on [Semantic Versioning](http://semver.org/). Examples of how to manipulate this _markdown_ can be found in [Keep a CHANGELOG](http://keepachangelog.com/).
 
+## [0.2.0](https://github.com/stone-payments/flask-management-blueprint/tree/v0.2.0) - 2020-06-18
+
+### Added
+
+- Return internal server error when API is unhealthy
+
 ## [0.1.0](https://github.com/stone-payments/flask-management-blueprint/tree/v0.1.0) - 2016-03-16
 
 ### Added
