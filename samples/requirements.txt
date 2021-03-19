@@ -9,7 +9,7 @@ flask-management-blueprint==0.1.0
 idna==2.6
 idna-ssl==1.0.1
 itsdangerous==0.24
-Jinja2==2.10.1
+Jinja2==2.11.3
 MarkupSafe==1.1.1
 multidict==4.1.0
 websockets==4.0.1
