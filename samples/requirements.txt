@@ -13,5 +13,5 @@ Jinja2==2.10.1
 MarkupSafe==1.1.1
 multidict==4.1.0
 websockets==4.0.1
-Werkzeug==0.15.3
+Werkzeug==2.2.3
 yarl==1.1.1
