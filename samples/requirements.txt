@@ -1,5 +1,5 @@
 aiofiles==0.3.2
-aiohttp==3.0.9
+aiohttp==3.7.4
 async-timeout==2.0.1
 attrs==17.4.0
 chardet==3.0.4
